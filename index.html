@@ -1,0 +1,166 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simphiwe Madrati - Empowering [Your Field]</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    </head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Simphiwe Madrati</h1>
+            <nav>
+                <ul>
+                    <li><a href="#about"><i class="fas fa-user"></i> About</a></li>
+                    <li><a href="#portfolio"><i class="fas fa-briefcase"></i> Portfolio</a></li>
+                    <li><a href="#resume"><i class="fas fa-file-alt"></i> Resume</a></li>
+                    <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="hero" class="hero">
+        <div class="container">
+            <img src="image/simphiweP.jpg" alt="Simphiwe Madrati" class="headshot">
+            <h2> Eager to leverage my expertise</h2>
+            <p class="tagline">Dedicated to building innovative solutions.</p>
+            <div class="hero-buttons">
+                <a href="#portfolio" class="button primary">View My Work</a>
+                <a href="#contact" class="button secondary">Connect with Me</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2><i class="fas fa-user"></i> About Me</h2>
+            <p>Blessed and highly favored, Simphiwe Madrati is a graduate eager to contribute and grow within an organization. I am committed to diligently performing tasks and being a valuable member of a successful team, embracing future challenges with dedication and loyalty.</p>
+            <div class="skills">
+                <h3><i class="fas fa-tools"></i> Skills & Expertise</h3>
+                <div class="skills-grid">
+                    <div class="skill">
+                        <i class="fas fa-cloud"></i>
+                        <span>Cloud Technologies</span>
+                        </div>
+                    <div class="skill">
+                        <i class="fas fa-code"></i>
+                        <span>Programming</span>
+                        </div>
+                    <div class="skill">
+                        <i class="fas fa-chart-bar"></i>
+                        <span>Data Analysis</span>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <h2><i class="fas fa-briefcase"></i> Portfolio Highlights</h2>
+            <div class="portfolio-grid">
+                <div class="project">
+                    <img src="placeholder-project1.jpg" alt="Project 1">
+                    <h3>Project Title 1</h3>
+                    <p>Brief description of project 1.</p>
+                    <a href="project1.html" class="button">View Project</a>
+                </div>
+                <div class="project">
+
+                    <script>
+                        // Basic navigation highlighting (optional)
+                        document.addEventListener('DOMContentLoaded', function() {
+                            const navLinks = document.querySelectorAll('header nav a');
+                            const sections = document.querySelectorAll('section');
+                
+                            function highlightNav() {
+                                let scrollY = window.scrollY;
+                
+                                sections.forEach(section => {
+                                    const sectionHeight = section.offsetHeight;
+                                    const sectionTop = section.offsetTop - 50; // Adjust offset as needed
+                                    const sectionId = section.getAttribute('id');
+                
+                                    if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+                                        navLinks.forEach(link => link.classList.remove('active'));
+                                        document.querySelector('header nav a[href*="' + sectionId + '"]').classList.add('active');
+                                    }
+                                });
+                            }
+                
+                            window.addEventListener('scroll', highlightNav);
+                        });
+                
+                        // Script to cycle through images in 'high' folder for Project 2
+                        document.addEventListener('DOMContentLoaded', function() {
+                            const project2Image = document.getElementById('project2-image');
+                            const imageFolder = 'high/';
+                            const imageFiles = ['ai3.jpg', 'ai4.jpg', 'ai5.jpg', 'ai7.jpg', 'ai8.jpg', 'simphiweP.jpg'];
+                            let currentIndex = 0;
+                
+                            function changeImage() {
+                                if (project2Image) {
+                                    project2Image.src = imageFolder + imageFiles[currentIndex];
+                                    currentIndex = (currentIndex + 1) % imageFiles.length;
+                                }
+                            }
+                
+                            // Initial image load
+                            changeImage();
+                
+                            // Change image every 5 seconds (adjust as needed)
+                            setInterval(changeImage, 5000);
+                        });
+                    </script>
+                </div>
+                </div>
+            <p class="view-all"><a href="portfolio.html">View All Projects</a></p>
+        </div>
+    </section>
+
+    <section id="resume" class="resume">
+        <div class="container">
+            <h2><i class="fas fa-file-alt"></i> Resume</h2>
+            <p>Download my comprehensive resume.</p>
+            <a href="document/SIMPHIWE MADRATI UPDATED CV.pdf" class="button primary" target="_blank">View Resume (PDF)</a>
+            </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2><i class="fas fa-envelope"></i> Contact Me</h2>
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="button primary">Send Message</button>
+            </form>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/simphiwe-madrati-b05b832a9?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <a href="mailto:simphiwemadrati26@gmail.com"><i class="fas fa-envelope"></i> Email</a>
+                </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Simphiwe Madrati. All rights reserved.</p>
+        </div>
+    </footer>
+
+   
+</body>
+</html>
